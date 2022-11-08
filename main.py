@@ -44,12 +44,27 @@ def sums():
             minn, maxx = maxx, minn
 
         for i in range(minn, maxx+1):
-            mul2 += list[i]
+            mul2 *= list[i]
 
-        print(f'Добуток елементів між мінімальним та максимальним елементом: {mul}')
-        print(f'Сума елементів, що знаходяться між першим та останнім додатним елементом: {mul2}')
+        print(f'Добуток елементів з індексами, кратними 3: {mul}')
+        print(f'Добуток елементів між мінімальним та максимальним елементом: {mul2}')
+
+        start = end = 0
+        mul3 = 1
+        for i in range(0, len(list)):
+            if start > list[i] >0:
+                start = i
+            if end < list[i] > 0:
+                end = i
+        if start > end:
+            start, end = end, start
+
+        for i in range(start+1, end):
+            print(list[i])
+            mul3 += list[i]
 
 
+        print(f'Сума елементів, що знаходяться між першим та останнім додатним елементом: {mul3}')
 
 
 
