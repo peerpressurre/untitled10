@@ -50,19 +50,18 @@ def sums():
         print(f'Добуток елементів між мінімальним та максимальним елементом: {mul2}')
 
         star = en = 0
-        mul3 = 1
-        for i in range(0, len(list)):
-            if star > list[i] >0:
-                star = i
-            if en < list[i] > 0:
-                en = i
-        if star > en:
-            star, en = en, star
+        mul3 = 0
+        for i in list:
+            if i > 0:
+                star = list.index(i)
+                break
+        for i in list:
+            if i > 0:
+                en = list.index(i)
 
-        for i in range(star, en+1):
+        for i in range(star, en + 1):
             print(list[i])
             mul3 += list[i]
-
 
         print(f'Сума елементів, що знаходяться між першим та останнім додатним елементом: {mul3}')
 
