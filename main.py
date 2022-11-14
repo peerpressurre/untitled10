@@ -49,17 +49,17 @@ def sums():
         print(f'Добуток елементів з індексами, кратними 3: {mul}')
         print(f'Добуток елементів між мінімальним та максимальним елементом: {mul2}')
 
-        start = end = 0
+        star = en = 0
         mul3 = 1
         for i in range(0, len(list)):
-            if start > list[i] >0:
-                start = i
-            if end < list[i] > 0:
-                end = i
-        if start > end:
-            start, end = end, start
+            if star > list[i] >0:
+                star = i
+            if en < list[i] > 0:
+                en = i
+        if star > en:
+            star, en = en, star
 
-        for i in range(start+1, end):
+        for i in range(star, en+1):
             print(list[i])
             mul3 += list[i]
 
