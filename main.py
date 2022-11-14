@@ -60,7 +60,6 @@ def sums():
                 en = list.index(i)
 
         for i in range(star, en + 1):
-            print(list[i])
             mul3 += list[i]
 
         print(f'Сума елементів, що знаходяться між першим та останнім додатним елементом: {mul3}')
